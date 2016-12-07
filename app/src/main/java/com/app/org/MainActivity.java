@@ -1,34 +1,28 @@
 package com.app.org;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    private Button startButton, quitButton;
+    private Button mapButton, quitButton, pclButton;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        startButton = (Button) findViewById(R.id.startButton);
+        mapButton = (Button) findViewById(R.id.mapButton);
+        pclButton = (Button) findViewById(R.id.pclButton);
         quitButton = (Button) findViewById(R.id.quitButton);
-        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
-        if (!preferences.contains("music")) {
-            preferences.edit()
-                    .putBoolean("music", true)
-                    .putBoolean("sound", true)
-                    .putBoolean("online", true)
-                    .apply();
-        }
-        startButton.setOnClickListener(this);
+
+        mapButton.setOnClickListener(this);
+        pclButton.setOnClickListener(this);
         quitButton.setOnClickListener(this);
     }
 
@@ -58,11 +52,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View view) {
-        if (view == startButton) {
-           // Intent start = new Intent(this, GameActivity.class);
-           // startActivity(start);
+        if (view == mapButton) {
+           Intent start = new Intent(this, MapActivity.class);
+           startActivity(start);
+        } else if (view == pclButton) {
+            Intent start = new Intent(this, PCLActivity.class);
+            startActivity(start);
         } else if (view == quitButton)
-            System.exit(0);
+            finish();
     }
 
     @Override

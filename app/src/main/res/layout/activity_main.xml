@@ -8,7 +8,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.app.org.MainActivity"
-    android:background="#ffffff">
+    android:background="@android:color/background_light">
 
     <TextView
         android:layout_width="wrap_content"
@@ -37,7 +37,7 @@
     <ImageView
         android:id="@+id/imageViewMenu"
         android:src="@drawable/smr"
-        android:layout_width="200dp"
+        android:layout_width="match_parent"
         android:layout_height="275dp"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
@@ -46,7 +46,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Map"
-        android:id="@+id/startButton"
+        android:id="@+id/mapButton"
         android:elevation="50dp"
         android:textStyle="bold"
         android:layout_gravity="bottom"

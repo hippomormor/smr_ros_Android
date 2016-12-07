@@ -11,4 +11,8 @@
         <item name="colorControlHighlight">#c5c5c5</item>
     </style>
 
+    <style name="ButtonFont" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textSize">15dp</item>
+    </style>
+
 </resources>

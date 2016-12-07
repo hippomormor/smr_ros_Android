@@ -18,11 +18,8 @@
         android:theme="@style/Theme.AppCompat"
         android:screenOrientation="locked"
         android:configChanges="orientation|keyboardHidden">
-        <service android:name="org.ros.android.NodeMainExecutorService" >
-            <intent-filter>
-                <action android:name="org.ros.android.NodeMainExecutorService" />
-            </intent-filter>
-        </service>
+
+
         <activity android:screenOrientation="locked" android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -30,9 +27,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:screenOrientation="locked"
-            android:name="org.ros.android.MasterChooser" />
+
+        <activity android:screenOrientation="locked" android:name=".MapActivity" />
+
+        <activity android:screenOrientation="locked" android:name=".PCLActivity" />
+
+        <activity android:name="org.ros.android.MasterChooser" />
+
+        <service android:name="org.ros.android.NodeMainExecutorService" >
+            <intent-filter>
+                <action android:name="org.ros.android.NodeMainExecutorService" />
+            </intent-filter>
+        </service>
+
         <activity
             android:screenOrientation="locked"
             android:name=".OptionsActivity"/>
