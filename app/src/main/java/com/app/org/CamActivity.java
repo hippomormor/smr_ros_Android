@@ -11,11 +11,11 @@ import org.ros.node.NodeMainExecutor;
 
 import sensor_msgs.CompressedImage;
 
-public class PCLActivity extends RosActivity {
+public class CamActivity extends RosActivity {
 
     private RosImageView<CompressedImage> image;
 
-    public PCLActivity() {
+    public CamActivity() {
         super("Image Transport", "Image Transport");
     }
 
@@ -23,17 +23,11 @@ public class PCLActivity extends RosActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_pcl);
+        setContentView(R.layout.activity_cam);
         image = (RosImageView<sensor_msgs.CompressedImage>) findViewById(R.id.image);
         image.setTopicName("/usb_cam/image_raw/compressed");
         image.setMessageType(sensor_msgs.CompressedImage._TYPE);
         image.setMessageToBitmapCallable(new BitmapFromCompressedImage());
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        finish();
     }
 
     @Override

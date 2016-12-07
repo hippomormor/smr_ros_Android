@@ -7,10 +7,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    private Button mapButton, quitButton, pclButton;
+    private Button mapButton, quitButton, camButton;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -18,11 +17,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         mapButton = (Button) findViewById(R.id.mapButton);
-        pclButton = (Button) findViewById(R.id.pclButton);
+        camButton = (Button) findViewById(R.id.camButton);
         quitButton = (Button) findViewById(R.id.quitButton);
 
         mapButton.setOnClickListener(this);
-        pclButton.setOnClickListener(this);
+        camButton.setOnClickListener(this);
         quitButton.setOnClickListener(this);
     }
 
@@ -55,8 +54,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (view == mapButton) {
            Intent start = new Intent(this, MapActivity.class);
            startActivity(start);
-        } else if (view == pclButton) {
-            Intent start = new Intent(this, PCLActivity.class);
+        } else if (view == camButton) {
+            Intent start = new Intent(this, CamActivity.class);
             startActivity(start);
         } else if (view == quitButton)
             finish();

@@ -57,12 +57,6 @@ public class MapActivity extends RosActivity {
   }
 
   @Override
-  protected void onDestroy() {
-    super.onDestroy();
-    finish();
-  }
-
-  @Override
   protected void init(NodeMainExecutor nodeMainExecutor) {
     visualizationView.init(nodeMainExecutor);
     cameraControlLayer.addListener(new CameraControlListener() {
