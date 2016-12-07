@@ -30,7 +30,9 @@
 
         <activity android:screenOrientation="locked" android:name=".MapActivity" />
 
-        <activity android:screenOrientation="locked" android:name=".CamActivity" />
+        <activity android:name=".CamActivity" />
+
+        <activity android:screenOrientation="locked" android:name=".PclActivity" />
 
         <activity android:name="org.ros.android.MasterChooser" />
 

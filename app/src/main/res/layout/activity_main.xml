@@ -11,38 +11,6 @@
     tools:context="com.app.org.MainActivity"
     android:background="#e8e8e8">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Cam"
-        android:id="@+id/camButton"
-        android:elevation="50dp"
-        android:textStyle="bold"
-        android:layout_gravity="bottom"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Map"
-        android:id="@+id/mapButton"
-        android:elevation="50dp"
-        android:textStyle="bold"
-        android:layout_gravity="bottom"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Quit"
-        android:id="@+id/quitButton"
-        android:textStyle="bold"
-        android:layout_gravity="bottom"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true" />
-
     <ImageView
         android:id="@+id/imageViewMenu"
         android:src="@drawable/smr"
@@ -73,5 +41,48 @@
         android:layout_above="@+id/imageViewMenu"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="13dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PCL"
+        android:id="@+id/pclButton"
+        android:elevation="50dp"
+        android:textStyle="bold"
+        android:layout_gravity="bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/camButton" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cam"
+        android:id="@+id/camButton"
+        android:elevation="50dp"
+        android:textStyle="bold"
+        android:layout_gravity="bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/quitButton" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Map"
+        android:id="@+id/mapButton"
+        android:elevation="50dp"
+        android:textStyle="bold"
+        android:layout_gravity="bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/pclButton" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quit"
+        android:id="@+id/quitButton"
+        android:textStyle="bold"
+        android:layout_gravity="bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>

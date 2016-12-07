@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    private Button mapButton, quitButton, camButton;
+    private Button mapButton, quitButton, camButton, pclButton;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -18,10 +18,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         mapButton = (Button) findViewById(R.id.mapButton);
         camButton = (Button) findViewById(R.id.camButton);
+        pclButton = (Button) findViewById(R.id.pclButton);
         quitButton = (Button) findViewById(R.id.quitButton);
 
         mapButton.setOnClickListener(this);
         camButton.setOnClickListener(this);
+        pclButton.setOnClickListener(this);
         quitButton.setOnClickListener(this);
     }
 
@@ -56,6 +58,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
            startActivity(start);
         } else if (view == camButton) {
             Intent start = new Intent(this, CamActivity.class);
+            startActivity(start);
+        } else if (view == pclButton) {
+            Intent start = new Intent(this, PclActivity.class);
             startActivity(start);
         } else if (view == quitButton)
             finish();

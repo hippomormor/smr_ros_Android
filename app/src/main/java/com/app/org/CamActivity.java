@@ -25,7 +25,7 @@ public class CamActivity extends RosActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cam);
         image = (RosImageView<sensor_msgs.CompressedImage>) findViewById(R.id.image);
-        image.setTopicName("/usb_cam/image_raw/compressed");
+        image.setTopicName("/camera/rgb/image_color/compressed");
         image.setMessageType(sensor_msgs.CompressedImage._TYPE);
         image.setMessageToBitmapCallable(new BitmapFromCompressedImage());
     }
