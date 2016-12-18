@@ -2,22 +2,11 @@ package com.app.org;
 
 import android.os.Bundle;
 
-import com.google.common.collect.Lists;
-
 import org.ros.address.InetAddressFactory;
 import org.ros.android.BitmapFromCompressedImage;
 import org.ros.android.RosActivity;
 import org.ros.android.view.RosImageView;
 import org.ros.android.view.VirtualJoystickView;
-import org.ros.android.view.visualization.VisualizationView;
-import org.ros.android.view.visualization.layer.CameraControlLayer;
-import org.ros.android.view.visualization.layer.LaserScanLayer;
-import org.ros.android.view.visualization.layer.Layer;
-import org.ros.android.view.visualization.layer.OccupancyGridLayer;
-import org.ros.android.view.visualization.layer.PathLayer;
-import org.ros.android.view.visualization.layer.PosePublisherLayer;
-import org.ros.android.view.visualization.layer.PoseSubscriberLayer;
-import org.ros.android.view.visualization.layer.RobotLayer;
 import org.ros.node.NodeConfiguration;
 import org.ros.node.NodeMainExecutor;
 
@@ -27,7 +16,6 @@ public class CamActivity extends RosActivity {
 
     private RosImageView<CompressedImage> image;
     private VirtualJoystickView virtualJoystickView;
-    private VisualizationView visualizationView;
 
     public CamActivity() {
         super("Image Transport", "Image Transport");

@@ -1,8 +1,6 @@
 package com.app.org;
 
-import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
@@ -11,27 +9,20 @@ import android.widget.CompoundButton;
 import android.widget.Switch;
 
 public class OptionsActivity extends AppCompatActivity implements CompoundButton.OnCheckedChangeListener {
-    private Switch soundSwitch, musicSwitch, onlineSwitch;
-
-    private SharedPreferences preferences;
+    private Switch switch1, switch2, switch3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_options);
 
-        soundSwitch = (Switch) findViewById(R.id.switchSound);
-        musicSwitch = (Switch) findViewById(R.id.switchMusic);
-        onlineSwitch = (Switch) findViewById(R.id.switchOnline);
+        switch1 = (Switch) findViewById(R.id.switch1);
+        switch2 = (Switch) findViewById(R.id.switch2);
+        switch3 = (Switch) findViewById(R.id.switch3);
 
-        preferences = PreferenceManager.getDefaultSharedPreferences(this);
-        musicSwitch.setChecked(preferences.getBoolean("music", false));
-        soundSwitch.setChecked(preferences.getBoolean("sound", false));
-        onlineSwitch.setChecked(preferences.getBoolean("online", false));
-
-        soundSwitch.setOnCheckedChangeListener(this);
-        musicSwitch.setOnCheckedChangeListener(this);
-        onlineSwitch.setOnCheckedChangeListener(this);
+        switch1.setOnCheckedChangeListener(this);
+        switch2.setOnCheckedChangeListener(this);
+        switch3.setOnCheckedChangeListener(this);
     }
 
     @Override
@@ -56,29 +47,16 @@ public class OptionsActivity extends AppCompatActivity implements CompoundButton
     @Override
     public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
 
-        if (compoundButton == musicSwitch) {
-            Log.d("Switch", "music " + musicSwitch.isChecked());
-            if (isChecked) {
-                preferences.edit().putBoolean("music", true).apply();
-            } else {
-                preferences.edit().putBoolean("music", false).apply();
-            }
+        if (compoundButton == switch1) {
+            Log.d("Switch", "1 " + switch1.isChecked());
         }
 
-        else if  (compoundButton == soundSwitch) {
-            Log.d("Switch", "sound " + soundSwitch.isChecked());
-            if (isChecked)
-                preferences.edit().putBoolean("sound", true).apply();
-            else
-                preferences.edit().putBoolean("sound", false).apply();
+        else if  (compoundButton == switch2) {
+            Log.d("Switch", "2 " + switch2.isChecked());
         }
 
-        else if  (compoundButton == onlineSwitch) {
-            Log.d("Switch", "online " + onlineSwitch.isChecked());
-            if (isChecked)
-                preferences.edit().putBoolean("online", true).apply();
-            else
-                preferences.edit().putBoolean("online", false).apply();
+        else if  (compoundButton == switch3) {
+            Log.d("Switch", "3 " + switch3.isChecked());
         }
     }
 }

@@ -13,11 +13,11 @@
     <Switch
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/switchSound"
+        android:id="@+id/switch2"
         android:checked="false"
         android:text="Meh.."
         android:layout_marginBottom="32dp"
-        android:layout_above="@+id/switchOnline"
+        android:layout_above="@+id/switch3"
         android:layout_centerHorizontal="true"
         android:textColor="@android:color/black"
         android:textStyle="normal|bold"
@@ -26,12 +26,12 @@
     <Switch
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/switchMusic"
+        android:id="@+id/switch1"
         android:checked="false"
         android:text="Meh.."
         android:layout_marginBottom="40dp"
-        android:layout_above="@+id/switchSound"
-        android:layout_alignEnd="@+id/switchSound"
+        android:layout_above="@+id/switch2"
+        android:layout_alignEnd="@+id/switch2"
         android:textColor="@android:color/black"
         android:textStyle="normal|bold"
         android:textSize="22sp" />
@@ -39,7 +39,7 @@
     <Switch
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/switchOnline"
+        android:id="@+id/switch3"
         android:checked="false"
         android:text="Meh.."
         android:layout_marginBottom="149dp"
@@ -47,7 +47,7 @@
         android:textStyle="normal|bold"
         android:textSize="22sp"
         android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/switchSound" />
+        android:layout_alignStart="@+id/switch2" />
 
     <TextView
         android:layout_width="wrap_content"
